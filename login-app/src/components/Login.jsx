@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { login } from '../api/Auth';
 
 const Login = ({ onLogin }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate(); // hook de navegação
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             const data = await login(email, password);
             onLogin(data);
+            navigate('/'); // redireciona para home após login
         // eslint-disable-next-line no-unused-vars
         } catch (error) {
             setError('Falha no login. Verifique suas credenciais.');
