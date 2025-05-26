@@ -23,7 +23,7 @@ const Register = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-200 px-4">
             <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
-                <h2 className="text-2xl font-semibold text-center text-blue-800 mb-6">Criar Conta</h2>
+                <h2 className="text-2xl font-semibold text-center text-black-800 mb-6">Criar Conta</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Email</label>
@@ -33,7 +33,7 @@ const Register = () => {
                             value={email}
                             onChange={e => setEmail(e.target.value)}
                             required
-                            className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                            className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-400 focus:outline-none"
                         />
                     </div>
                     <div>
@@ -44,13 +44,13 @@ const Register = () => {
                             value={password}
                             onChange={e => setPassword(e.target.value)}
                             required
-                            className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                            className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-400 focus:outline-none"
                         />
                     </div>
                     {error && <p className="text-sm text-red-600 mt-1">{error}</p>}
                     <button
                         type="submit"
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition duration-200"
+                        className="w-full bg-violet-600 hover:bg-violet-700 text-white font-semibold py-2 rounded-lg transition duration-200"
                     >
                         Cadastrar
                     </button>
