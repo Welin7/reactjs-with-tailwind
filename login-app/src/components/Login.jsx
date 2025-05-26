@@ -21,7 +21,7 @@ const Login = ({ onLogin }) => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-200 px-4">
+        <div className="min-h-screen flex items-center justify-center bg-purple-50">
             <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
                 <h2 className="text-2xl font-semibold text-center text-black-800 mb-6">Entrar na Conta</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
