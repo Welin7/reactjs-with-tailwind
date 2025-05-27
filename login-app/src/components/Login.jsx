@@ -3,15 +3,15 @@ import { useNavigate, Link } from 'react-router-dom';
 import { login } from '../api/Auth';
 
 const Login = ({ onLogin }) => {
-    const [email, setEmail] = useState('');
+    const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate(); // hook de navegação
-
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const data = await login(email, password);
+            const data = await login({ userName, password });
             onLogin(data);
             navigate('/'); // redireciona para home após login
         // eslint-disable-next-line no-unused-vars
@@ -19,7 +19,7 @@ const Login = ({ onLogin }) => {
             setError('Falha no login. Verifique suas credenciais.');
         }
     };
-
+    
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-violet-500 to-white-400">
             <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
@@ -30,8 +30,8 @@ const Login = ({ onLogin }) => {
                         <input
                             type="email"
                             placeholder="seuemail@exemplo.com"
-                            value={email}
-                            onChange={e => setEmail(e.target.value)}
+                            value={userName}
+                            onChange={e => setUserName(e.target.value)}
                             required
                             className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-400 focus:outline-none"
                         />
