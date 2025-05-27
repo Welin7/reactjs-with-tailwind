@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { register } from '../api/Auth';
 
 const Register = () => {
-    const [email, setEmail] = useState('');
+    const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
@@ -11,7 +11,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await register(email, password);
+            await register({userName, password});
             alert('Cadastro realizado com sucesso!');
             navigate('/login'); // redireciona para o login após registro
         // eslint-disable-next-line no-unused-vars
@@ -30,8 +30,8 @@ const Register = () => {
                         <input
                             type="email"
                             placeholder="seuemail@exemplo.com"
-                            value={email}
-                            onChange={e => setEmail(e.target.value)}
+                            value={userName}
+                            onChange={e => setUserName(e.target.value)}
                             required
                             className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-400 focus:outline-none"
                         />
