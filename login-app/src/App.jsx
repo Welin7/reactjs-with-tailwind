@@ -38,7 +38,7 @@ const App = () => {
                     element={
                         isAuthenticated ? (
                             <div>
-                                <h1>Welcome!</h1>
+                                <h1>Seja Bem Vindo ao Sistema!</h1>
                                 <Logout onLogout={handleLogout} />
                             </div>
                         ) : (
