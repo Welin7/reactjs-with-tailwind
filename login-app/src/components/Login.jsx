@@ -23,13 +23,13 @@ const Login = ({ onLogin }) => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-violet-500 to-white-400">
             <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
-                <h2 className="text-2xl font-semibold text-center text-black-800 mb-6">Entrar na Conta</h2>
+                <h2 className="text-2xl font-semibold text-center text-black-800 mb-6">Log into Account</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Email</label>
                         <input
                             type="email"
-                            placeholder="seuemail@exemplo.com"
+                            placeholder="youremail@exemplo.com"
                             value={userName}
                             onChange={e => setUserName(e.target.value)}
                             required
@@ -37,7 +37,7 @@ const Login = ({ onLogin }) => {
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">Senha</label>
+                        <label className="block text-sm font-medium text-gray-700">Password</label>
                         <input
                             type="password"
                             placeholder="••••••••"
@@ -54,12 +54,12 @@ const Login = ({ onLogin }) => {
                         type="submit"
                         className="w-full bg-violet-600 hover:bg-violet-700 text-white font-semibold py-2 rounded-lg transition duration-200"
                     >
-                        Entrar
+                        To enter
                     </button>
                     <p className="flex items-center justify-center text-sm">
-                        Não tem uma conta?&nbsp;
+                        Don't have an account?&nbsp;
                         <Link to="/register" className="text-violet-600 hover:underline font-medium">
-                            Crie uma conta grátis.
+                            Create a free account.
                         </Link>
                     </p>
                 </form>
