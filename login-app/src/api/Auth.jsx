@@ -43,7 +43,7 @@ export const logout = () => {
 
 export const refreshTokens = async () => {
   try {
-    const response = await fetch(`${API_URL}/auth/refresh`, {
+    const response = await fetch(`${API_URL}/Auth/refresh-token`, {
       method: 'POST',
       credentials: 'include', // se o refresh token estiver no cookie
     });
