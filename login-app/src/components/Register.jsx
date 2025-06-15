@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { register } from '../api/Auth';
 
 const Register = () => {
@@ -54,6 +54,12 @@ const Register = () => {
                     >
                         Register
                     </button>
+                    <p className="flex items-center justify-center text-sm">
+                        Do you have an account?&nbsp;
+                        <Link to="/login" className="text-violet-600 hover:underline font-medium">
+                            To enter in Account.
+                        </Link>
+                    </p>
                 </form>
             </div>
         </div>
